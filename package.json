@@ -1,0 +1,28 @@
+{
+	"name": "2csv",
+	"description": "A pluggable file format converter into Comma-Separated Values (CSV)",
+	"version": 0.0.1,
+	"homepage": "https://github.com/csvplot/2csv",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/csvplot/2csv.git"
+	},
+	"bugs": "http://github.com/csvplot/2csv/issues",
+	"author": "David Ellis <d.f.ellis@ieee.org> (http://dfellis.posterous.com)",
+	"main": "lib/2csv.js",
+	"dependencies": {},
+	"devDependencies": {
+		"expresso": ">=0.8.1"
+	},
+	"engines": {
+		"node": "*"
+	},
+	"bin": {
+		"2csv": "bin/2csv.js",
+		"2csv-register": "bin/2csv-register.js"
+	}
+	"preferGlobal": true,
+	"scripts": {
+		"test": "expresso test/test.js"
+	}
+}
