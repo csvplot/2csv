@@ -11,7 +11,8 @@
 	"author": "David Ellis <d.f.ellis@ieee.org> (http://dfellis.posterous.com)",
 	"main": "lib/2csv.js",
 	"dependencies": {
-		"commander": "*"
+		"commander": "*",
+		"async": "*"
 	},
 	"devDependencies": {
 		"expresso": ">=0.8.1"
