@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 // # The ``2csv-register`` command
 // used by plugins to register themselves as ``2csv`` plugins
 
@@ -39,7 +41,7 @@ if(path.existsSync(path.join(__dirname, "2csv.json"))) { try {
 } catch(e) { 
 	console.error(path.join(__dirname, "2csv.json") + " is not a valid JSON file. Please correct or delete this file to use the 2csv library.");
 	process.exit();
-}
+}}
 
 // Remove the specified plugin, if any
 settings.plugins = settings.plugins.filter(function(plugin) {
