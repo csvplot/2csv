@@ -6,6 +6,11 @@ var path = require('path');
 var commander = require('commander');
 var toCsv = require('2csv');
 
+process.on('uncaughtException', function (err) {
+	  console.error('Could not convert file: %s', err);
+	  process.exit(-1);
+});
+
 commander
 	.version('0.0.1')
 	.usage('[options] <inputfile>')
@@ -19,7 +24,7 @@ if(commander.converter) {
 }
 
 if(!commander.input) {
-	commander.input = process.argv.slice(-1);
+	commander.input = process.argv[process.argv.length-1];
 }
 
 if(!commander.output) {
