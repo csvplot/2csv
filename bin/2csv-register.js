@@ -36,10 +36,10 @@ if(commander["mime-type"]) {
 
 // Load the current set of plugins, if any; fail out if the config file is invalid
 var settings = { plugins: [] };
-if(path.existsSync(path.join(__dirname, "2csv.json"))) { try {
-	settings = JSON.parse(fs.readFileSync(path.join(__dirname, "2csv.json")));
+if(path.existsSync(path.join(__dirname, "../2csv.json"))) { try {
+	settings = JSON.parse(fs.readFileSync(path.join(__dirname, "../2csv.json")));
 } catch(e) { 
-	console.error(path.join(__dirname, "2csv.json") + " is not a valid JSON file. Please correct or delete this file to use the 2csv library.");
+	console.error(path.join(__dirname, "../2csv.json") + " is not a valid JSON file. Please correct or delete this file to use the 2csv library.");
 	process.exit();
 }}
 
@@ -52,10 +52,10 @@ if(!commander.remove) {
 // Add the new plugin
 	settings.plugins.push({
 		lib: commander.name,
-		ext: commander.extension,
-		mime: commander["mime-type"]
+		ext: commander.extension || [],
+		mime: commander["mime-type"] || []
 	});
 }
 
 // Save the new settings object
-fs.writeFileSync(path.join(__dirname, "2csv.json"), JSON.stringify(settings, null, '\t'));
+fs.writeFileSync(path.join(__dirname, "../2csv.json"), JSON.stringify(settings, null, '\t'));
