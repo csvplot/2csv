@@ -4,16 +4,18 @@ A [Node.js](nodejs.org)-based application for converting data into Comma-Separat
 
 ## Install
 
-No install yet, as this is the first commit.
+    npm install -g 2csv
 
 ## Features
-
-(Planned features as this is the first commit.)
 
 * Simple command-line conversion of data from supported formats (extension and/or ``file``-based determination) ``2csv file.ext //produces file.ext.csv``
 * Plugin system supporting chunked or whole data.
 * Registration of plugins using ``2csv-register`` command.
+
+## Planned Features
+
 * ``2csv-web.js`` wrapper script for using plugins in the browser in conjunction with the [File API](w3.org/TR/FileAPI)
+* ``2csv-web`` command for bundling the wrapper script with specified plugins into a single .js file
 
 ## License (MIT)
 
