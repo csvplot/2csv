@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 // # The ``2csv`` command-line utility
 
 var fs = require('fs');

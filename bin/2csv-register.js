@@ -1,5 +1,4 @@
-#!/usr/bin/node
-
+#!/usr/bin/env node
 // # The ``2csv-register`` command
 // used by plugins to register themselves as ``2csv`` plugins
 
