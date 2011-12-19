@@ -12,7 +12,7 @@ process.on('uncaughtException', function (err) {
 });
 
 commander
-	.version('0.0.1')
+	.version('0.1.1')
 	.usage('[options] <inputfile>')
 	.option('-i, --input <file>', 'The input file to convert', String)
 	.option('-o, --output [file]', 'The output filename (optional)', String)

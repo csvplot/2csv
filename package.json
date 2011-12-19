@@ -1,7 +1,7 @@
 {
 	"name": "2csv",
 	"description": "A pluggable file format converter into Comma-Separated Values (CSV)",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"homepage": "https://github.com/csvplot/2csv",
 	"repository": {
 		"type": "git",

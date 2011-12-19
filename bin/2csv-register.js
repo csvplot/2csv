@@ -8,7 +8,7 @@ var commander = require('commander');
 
 // Define the cli options and parse the input
 commander
-	.version('0.0.1')
+	.version('0.1.1')
 	.option('-e, --extension <extension>,[extension],...', 'A comma-separated list of extensions supported by the plugin', String)
 	.option('-m, --mime-type <mime>,[mime],...', 'A comma-separated list of mime types supported by the plugin', String)
 	.option('-n, --name <name>', 'The name of the plugin (to use with ``require``)', String)
