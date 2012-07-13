@@ -2,7 +2,6 @@
 // # The ``2csv`` command-line utility
 
 var fs = require('fs');
-var path = require('path');
 var commander = require('commander');
 var toCsv = require('2csv');
 

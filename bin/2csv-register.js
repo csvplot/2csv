@@ -6,6 +6,10 @@ var fs = require('fs');
 var path = require('path');
 var commander = require('commander');
 
+// Monkey-patch so Node 0.4.x can run this Node 0.8.x-compliant code
+fs.exists = fs.exists ? fs.exists : path.exists;
+fs.existsSync = fs.existsSync ? fs.existsSync : path.existsSync;
+
 // Define the cli options and parse the input
 commander
 	.version('0.1.1')
@@ -35,7 +39,7 @@ if(commander["mime-type"]) {
 
 // Load the current set of plugins, if any; fail out if the config file is invalid
 var settings = { plugins: [] };
-if(path.existsSync(path.join(__dirname, "../2csv.json"))) { try {
+if(fs.existsSync(path.join(__dirname, "../2csv.json"))) { try {
 	settings = JSON.parse(fs.readFileSync(path.join(__dirname, "../2csv.json")));
 } catch(e) { 
 	console.error(path.join(__dirname, "../2csv.json") + " is not a valid JSON file. Please correct or delete this file to use the 2csv library.");
