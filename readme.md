@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/csvplot/2csv.png)](http://travis-ci.org/csvplot/2csv)
 # 2csv
 
 A [Node.js](nodejs.org)-based application for converting data into Comma-Separated Values (CSV).
